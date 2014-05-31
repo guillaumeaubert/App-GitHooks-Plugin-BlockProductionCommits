@@ -111,7 +111,7 @@ sub run_pre_commit
 	{
 		my $remotes = $repository->run( 'remote', '-v' );
 		return $PLUGIN_RETURN_PASSED
-			if $remotes =~ /$remotes_whitelist_regex/;
+			if $remotes =~ /$remotes_whitelist_regex/x;
 	}
 
 	my $failure_character = $app->get_failure_character();
