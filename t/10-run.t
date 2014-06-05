@@ -13,6 +13,9 @@ use Test::More;
 use App::GitHooks::Test qw( ok_add_files ok_setup_repository );
 
 
+# Require git.
+has_git( '1.7.4.1' );
+
 ## no critic (RegularExpressions::RequireExtendedFormatting)
 
 # Test files.
