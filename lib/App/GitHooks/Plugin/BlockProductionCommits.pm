@@ -24,11 +24,11 @@ sounds like a terrible idea.
 
 =head1 VERSION
 
-Version 1.0.1
+Version 1.0.2
 
 =cut
 
-our $VERSION = '1.0.1';
+our $VERSION = '1.0.2';
 
 
 =head1 CONFIGURATION OPTIONS
