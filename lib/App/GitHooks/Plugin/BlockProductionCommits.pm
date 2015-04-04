@@ -6,6 +6,7 @@ use warnings;
 use base 'App::GitHooks::Plugin';
 
 # External dependencies.
+use Carp qw( croak );
 
 # Internal dependencies.
 use App::GitHooks::Constants qw( :PLUGIN_RETURN_CODES );
@@ -97,6 +98,8 @@ sub run_pre_commit
 
 	# Check if the environment is safe to commit in.
 	my $env_variable = $config->get( 'BlockProductionCommits', 'env_variable' );
+	croak "You must define 'env_variable' in the [BlockProductionCommits] section of your githooksrc config"
+		if !defined( $env_variable );
 	my $env_value = $ENV{ $env_variable } // '';
 	my $env_regex = $config->get_regex( 'BlockProductionCommits', 'env_safe_regex' );
 	return $PLUGIN_RETURN_PASSED

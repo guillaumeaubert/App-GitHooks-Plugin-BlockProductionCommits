@@ -16,6 +16,7 @@ lib/App/GitHooks/Plugin/BlockProductionCommits.pm
 t/00-load.t
 t/01-git_version.t
 t/10-run.t
+t/12-missing_config.t
 xt/changes.t
 xt/kwalitee.t
 xt/manifest.t
