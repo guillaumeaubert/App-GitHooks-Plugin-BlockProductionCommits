@@ -3,7 +3,7 @@ App-GitHooks-Plugin-BlockProductionCommits
 
 [![Build Status](https://travis-ci.org/guillaumeaubert/App-GitHooks-Plugin-BlockProductionCommits.svg?branch=master)](https://travis-ci.org/guillaumeaubert/App-GitHooks-Plugin-BlockProductionCommits)
 [![Coverage Status](https://coveralls.io/repos/guillaumeaubert/App-GitHooks-Plugin-BlockProductionCommits/badge.svg?branch=master)](https://coveralls.io/r/guillaumeaubert/App-GitHooks-Plugin-BlockProductionCommits?branch=master)
-[![Latest Version](https://img.shields.io/github/tag/guillaumeaubert/App-GitHooks-Plugin-BlockProductionCommits.svg?style=flat)](https://metacpan.org/release/App-GitHooks-Plugin-BlockProductionCommits)
+[![CPAN](https://img.shields.io/cpan/v/App-GitHooks-Plugin-BlockProductionCommits.svg)](https://metacpan.org/release/App-GitHooks-Plugin-BlockProductionCommits)
 
 App::GitHooks plugin to prevent commits in a production environment.
 
