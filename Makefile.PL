@@ -3,22 +3,23 @@ require 5.010;
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
+  'test' => {
+              'TESTS' => 't/*.t'
+            },
+  'PL_FILES' => {},
+  'INSTALLDIRS' => 'site',
   'NAME' => 'App::GitHooks::Plugin::BlockProductionCommits',
+  'EXE_FILES' => [],
   'VERSION_FROM' => 'lib/App/GitHooks/Plugin/BlockProductionCommits.pm',
   'PREREQ_PM' => {
                    'App::GitHooks' => 0,
-                   'Capture::Tiny' => 0,
-                   'Git::Repository' => 0,
-                   'Test::Exception' => 0,
-                   'Test::FailWarnings' => 0,
                    'Test::Git' => 0,
-                   'Test::More' => '0.94'
-                 },
-  'INSTALLDIRS' => 'site',
-  'EXE_FILES' => [],
-  'PL_FILES' => {},
-  'test' => {
-              'TESTS' => 't/*.t'
-            }
+                   'Test::Exception' => 0,
+                   'Capture::Tiny' => 0,
+                   'Test::FailWarnings' => 0,
+                   'Carp' => 0,
+                   'Test::More' => '0.94',
+                   'Git::Repository' => 0
+                 }
 )
 ;

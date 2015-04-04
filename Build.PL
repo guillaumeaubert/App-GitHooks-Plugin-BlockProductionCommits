@@ -51,6 +51,7 @@ my $builder = $class->new(
 	requires             =>
 	{
 		'App::GitHooks'        => 0,
+		'Carp'                 => 0,
 		'perl'                 => 5.010,
 	},
 	add_to_cleanup       =>
