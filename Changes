@@ -1,5 +1,8 @@
 Revision history for App-GitHooks-Plugin-BlockNOCOMMIT
 
+v1.1.0  2015-04-03
+        - Added check for missing env_variable setting.
+
 v1.0.2  2014-06-07
         - Made git test safer to run.
 
