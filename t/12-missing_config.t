@@ -7,14 +7,14 @@ use warnings;
 # Capture::Tiny.
 use Capture::Tiny;
 use Test::Exception;
-use Test::Git;
+use Test::Requires::Git;;
 use Test::More;
 
 use App::GitHooks::Test qw( ok_add_files ok_setup_repository );
 
 
 # Require git.
-has_git( '1.7.4.1' );
+test_requires_git( '1.7.4.1' );
 
 ## no critic (RegularExpressions::RequireExtendedFormatting)
 
@@ -31,7 +31,7 @@ my $env_variable = 'test_environment';
 my $failure = qr/x Non-dev environment detected - please commit from your dev instead/;
 
 # Bail out if Git isn't available.
-has_git();
+test_requires_git();
 plan( tests => 4 );
 
 my $repository = ok_setup_repository(
